@@ -1,0 +1,35 @@
+# Mac OS X
+.DS_Store
+.Trashes
+*.moved-aside
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.xccheckout
+*.xcuserstate
+*.tm_build_errors
+project.xcworkspace/
+xcuserdata/
+ThePicker.xcodeproj/xcuserdata/*
+ThePicker.xcodeproj/project.xcworkspace/xcuserdata/*
+ThePicker.xcodeproj/project.xcworkspace/xcuserdata/
+
+# Generated files
+*.o
+*.pyc
+
+
+#Python modules
+MANIFEST
+dist/
+build/
+
+# Backup files
+*~.nib
+
+# sublime
+*.sublime-workspace
