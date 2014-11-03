@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NameHelper</class>
+ <widget class="QDialog" name="NameHelper">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>312</width>
+    <height>310</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Name Helper</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>291</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="suffixVerticalLayout">
+    <item>
+     <widget class="QGroupBox" name="suffixGroupBox">
+      <property name="minimumSize">
+       <size>
+        <width>289</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Suffix Helper</string>
+      </property>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>271</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="suffixHorizontalLayout">
+        <item>
+         <widget class="QComboBox" name="suffixComboBox">
+          <item>
+           <property name="text">
+            <string>geo</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>joint</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ctrl</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>anim</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>group</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>ik</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>locator</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="suffixAddButton">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="suffixRemoveButton">
+          <property name="text">
+           <string>Remove</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>291</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="renameVerticalLayout">
+    <item>
+     <widget class="QGroupBox" name="renameGroupBox">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="title">
+       <string>Rename</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>271</width>
+         <height>89</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="renameGridLayout">
+        <item row="1" column="0">
+         <widget class="QLabel" name="renameReplaceLabel">
+          <property name="text">
+           <string>Replace</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="renameFindLabel">
+          <property name="text">
+           <string>Find</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="renameFindText"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="renameReplaceText"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QPushButton" name="renameButton">
+          <property name="text">
+           <string>Rename</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>291</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="numerateVerticalLayout">
+    <item>
+     <widget class="QGroupBox" name="numerateGroupBox">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="title">
+       <string>Numerate</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>271</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="numberateGridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="numberateLabel">
+          <property name="text">
+           <string>Name###here</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="numerateText"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="numerateButton">
+          <property name="text">
+           <string>Numerate</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

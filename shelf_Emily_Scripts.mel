@@ -1,6 +1,6 @@
-global proc shelf_Emily_Scripts () { 				
-	global string $gBuffStr; 				
-	global string $gBuffStr0;     			
+global proc shelf_Emily_Scripts () {                 
+	global string $gBuffStr;                 
+	global string $gBuffStr0;                 
 	global string $gBuffStr1;
 
 
@@ -12,20 +12,49 @@ global proc shelf_Emily_Scripts () {
 		-manage 1
 		-visible 1
 		-preventOverride 0
-		-annotation "Description for Script One"
+		-annotation "Creates two locations for up and x aim direction; orientates joints accordingly."
 		-enableBackground 0
 		-align "center"
-		-label "Script One"
+		-label "Joint Orientation"
 		-labelOffset 0
 		-font "plainLabelFont"
+		-imageOverlayLabel "JOr"
 		-overlayLabelColor 0.8 0.8 0.8
 		-overlayLabelBackColor 0 0 0 0.25
-		-image "default.png"
-		-image1 "default.png"
+		-image "commandButton.png"
+		-image1 "commandButton.png"
 		-style iconOnly
 		-marginWidth 1
 		-marginHeight 1
-		-command "script1.py"
+		-command "import JointOrient as jo; reload(jo); jo.main();"
+		-sourceType python
+		-commandRepeatable 1
+		-flat 1
+	;
+
+	shelfButton
+		-enableCommandRepeat 1
+		-enable 1
+		-width 35
+		-height 35
+		-manage 1
+		-visible 1
+		-preventOverride 0
+		-annotation "Helps rename selected objects."
+		-enableBackground 0
+		-align "center"
+		-label "Name Helper"
+		-labelOffset 0
+		-font "plainLabelFont"
+		-imageOverlayLabel "Name"
+		-overlayLabelColor 0.8 0.8 0.8
+		-overlayLabelBackColor 0 0 0 0.25
+		-image "commandButton.png"
+		-image1 "commandButton.png"
+		-style iconOnly
+		-marginWidth 1
+		-marginHeight 1
+		-command "import NameHelper as nh; reload(nh); nh.main();"
 		-sourceType python
 		-commandRepeatable 1
 		-flat 1
