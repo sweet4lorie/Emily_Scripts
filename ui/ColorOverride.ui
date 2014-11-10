@@ -1,68 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NameHelper</class>
- <widget class="QDialog" name="NameHelper">
+ <class>ColorOverride</class>
+ <widget class="QDialog" name="ColorOverride">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>328</width>
-    <height>170</height>
+    <width>380</width>
+    <height>190</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Joint Orient</string>
+   <string>Color Override</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
     <rect>
      <x>9</x>
      <y>9</y>
-     <width>311</width>
-     <height>151</height>
+     <width>361</width>
+     <height>171</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="suffixVerticalLayout">
+   <layout class="QVBoxLayout" name="coVerticalLayout">
     <item>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="coGroupBox">
       <property name="title">
        <string>Choose color:</string>
       </property>
       <widget class="QWidget" name="verticalLayoutWidget_2">
        <property name="geometry">
         <rect>
-         <x>-1</x>
-         <y>19</y>
-         <width>308</width>
-         <height>137</height>
+         <x>10</x>
+         <y>20</y>
+         <width>341</width>
+         <height>149</height>
         </rect>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout">
+       <layout class="QVBoxLayout" name="coVerticalLayout_2">
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
+         <layout class="QHBoxLayout" name="defaultColorHorizontalLayout">
           <item>
-           <widget class="QPushButton" name="pushButton_2">
+           <widget class="QPushButton" name="defaultColor0Button">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 0)</string>
+            </property>
             <property name="text">
              <string/>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="defaultColor1Button">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 0, 0)</string>
+            </property>
             <property name="text">
              <string/>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_4">
+           <widget class="QPushButton" name="defaultColor2Button">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 255)</string>
+            </property>
             <property name="text">
              <string/>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_5">
+           <widget class="QPushButton" name="defaultColor3Button">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(128, 128, 128)</string>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -78,9 +90,9 @@
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <layout class="QHBoxLayout" name="sliderHorizontalLayout">
           <item>
-           <widget class="QPushButton" name="pushButton_6">
+           <widget class="QPushButton" name="sliderButton">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -90,7 +102,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QSlider" name="horizontalSlider">
+           <widget class="QSlider" name="sliderHorizontalSlider">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -102,19 +114,26 @@
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>set</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <layout class="QHBoxLayout" name="buttonHorizontalLayout">
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="overrideButton">
             <property name="text">
              <string>Override</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_7">
+           <widget class="QPushButton" name="clearButton">
             <property name="text">
              <string>Clear</string>
             </property>
@@ -124,8 +143,6 @@
         </item>
        </layout>
       </widget>
-      <zorder>verticalLayoutWidget_2</zorder>
-      <zorder>horizontalLayoutWidget_2</zorder>
      </widget>
     </item>
    </layout>

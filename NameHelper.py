@@ -26,12 +26,12 @@ class NameHelper(base_class, form_class):
         self.suffixAddButton.pressed.connect(partial(self.suffix, "add"))
         self.suffixRemoveButton.pressed.connect(partial(self.suffix, "delete"))
         self.renameButton.pressed.connect(self.rename)
-        self.numerateButton.pressed.connect(self.numberate)
+        self.numerateButton.pressed.connect(self.numerate)
 
 
     def suffix(self, typeStr):
-        suffixStr = "_" + (self.suffixComboBox.currentText()).__str__()
         sList = cmds.ls(selection = True)
+        suffixStr = "_" + str(self.suffixComboBox.currentText())
         for s in sList:
             if typeStr == "add":
                 cmds.rename(s, s + suffixStr)
@@ -42,16 +42,32 @@ class NameHelper(base_class, form_class):
 
 
     def rename(self):
+        sList = cmds.ls(selection = True)
         findStr = str(self.renameFindText.text())
         replaceStr = str(self.renameReplaceText.text())
-        sList = cmds.ls(selection = True)
         for s in sList:
             sNew = s.replace(findStr, replaceStr)
             cmds.rename(s, sNew)
 
 
-    def numberate(self):
-        print todo
+    def numerate(self):
+        try:
+            sList = cmds.ls(selection = True)
+            nText = str(self.numerateText.text())
+            count = nText.count("#")
+            newText = ""
+
+            for n in range(len(sList)):
+                # create a str with appropriate number of "#"
+                findStr = "".ljust(count, "#")
+                # see if str is in text, not separated
+                if findStr in nText and count != 0:
+                    # new string has appropriate number of "0"
+                    replaceStr = str(n+1).zfill(count)
+                    sNew = nText.replace(findStr, replaceStr)
+                    cmds.rename(sList[n], sNew)
+        except:
+            cmds.error("ERROR: numerate text now working; check you text")
 
 
 def main():
